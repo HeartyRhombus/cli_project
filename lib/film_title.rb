@@ -18,11 +18,6 @@ class Film
 
     def self.find_by_title(title)
         self.all.find {|film| film.title == title}
-        # binding.pry
-        # puts "#{film.title}"
-        # puts "#{film.director}"
-        # puts "#{film.release_date}"
-        # puts "#{film.description}"
     end
 
 end
