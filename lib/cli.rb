@@ -38,7 +38,9 @@ class CLI
                     puts "Thank you for using the Ghibli Movie Library!"
                     puts ""
                 else
+                    puts ""
                     puts "I'm sorry, I didn't understand your request. Please try again."
+                    puts ""
                 end
             end
 
