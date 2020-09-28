@@ -11,22 +11,31 @@ class CLI
         puts "Welcome to the Ghibli Movie Library"
         puts "----------------------------------"
         puts ""
-        
-        while input != "exit"
+        puts ""
+        puts "To view a listing of Ghibli movies please enter 'titles'."
+        puts ""
 
-            puts ""
-            puts "To view a listing of Ghibli movies please enter 'titles'."
-            puts ""
+        while input != "exit"
 
             input = gets.strip.downcase
 
-    
-                case input
-                    when "titles"
-                        # binding.pry
-                        titles
-                    else
-                        nil
+            case input
+                when "titles"
+                    # binding.pry
+                    titles
+                    puts ""
+                    puts "To view more information about a film, enter then number of the film you wish to see,"
+                    puts "Or enter 'exit' to exit:"
+                    input2 = gets.strip.downcase
+
+                    case input2
+                        when input2 > 0 && input2 <= Film.all.length
+                            #display film info for movie selected
+                        when "exit"
+                            #leave the program
+                        end
+                else
+                    puts "I'm sorry, I didn't understand your request. Please try again."
                 end
             end
         
@@ -39,7 +48,7 @@ class CLI
 
 
     def titles
-        Film_Title.all.sort_by {|film| film.title}.each.with_index(1) do |film, index|
+        Film.all.sort_by {|film| film.title}.each.with_index(1) do |film, index|
             puts "#{index}. #{film.title}"
         end
     end

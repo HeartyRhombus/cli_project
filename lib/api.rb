@@ -7,7 +7,7 @@ class API
         films = JSON.parse(response)
         # binding.pry
         films.each do |film|
-            Film_Title.new(title: film["title"], director: film["director"], release_date: film["release_date"], description: film["description"])
+            Film.new(title: film["title"], director: film["director"], release_date: film["release_date"], description: film["description"])
         end
     end
 

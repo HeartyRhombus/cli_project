@@ -1,4 +1,4 @@
-class Film_Title
+class Film
 
     attr_accessor :title, :director, :description, :release_date
 
@@ -14,6 +14,15 @@ class Film_Title
 
     def self.all
         @@all
+    end
+
+    def self.find_by_title(title)
+        self.all.find {|film| film.title == title}
+        # binding.pry
+        # puts "#{film.title}"
+        # puts "#{film.director}"
+        # puts "#{film.release_date}"
+        # puts "#{film.description}"
     end
 
 end
