@@ -16,8 +16,4 @@ class Film
         @@all
     end
 
-    def self.find_by_title(title)
-        self.all.find {|film| film.title == title}
-    end
-
 end

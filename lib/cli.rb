@@ -12,44 +12,41 @@ class CLI
         puts "----------------------------------"
         puts ""
         puts ""
-        puts "To view a listing of Ghibli movies please enter 'titles'."
+        puts "To view a listing of Ghibli movies please enter 'films'."
         puts ""
 
-        while input != "exit"
+        until input == "exit"
 
             input = gets.strip.downcase
 
             case input
-                when "titles"
+                when "films"
                     # binding.pry
                     titles
-                    prompt
+                    puts ""
+                    puts "To view more information about a film, enter the number of the film you wish to see,"
+                    puts "Or enter 'exit' to exit:"
 
                     input2 = gets.strip.to_i
 
                     film_info(input2)
 
-                #     case input2
-                #         when input2 > 0 && input2 <= Film.all.length
-                #             #display film info for movie selected
-                #         when "exit"
-                #             #leave the program
-                #         end
-                # when !"titles" && !"exit"
-                #     puts "I'm sorry, I didn't understand your request. Please try again."
+                    prompt
+
+                when "exit"
+                    puts ""
+                    puts "Thank you for using the Ghibli Movie Library!"
+                    puts ""
+                else
+                    puts "I'm sorry, I didn't understand your request. Please try again."
                 end
             end
-        
-        # puts "To view a title's description, enter 'description'."
-        # puts "To view a title's director, enter 'director'."
-        # puts "To view a title's release date, enter 'date'."
-        # puts "To exit, enter 'exit'."
 
     end
 
     def prompt
         puts ""
-        puts "To view more information about a film, enter the number of the film you wish to see,"
+        puts "To view the film list again, enter 'films',"
         puts "Or enter 'exit' to exit:"
     end
 
