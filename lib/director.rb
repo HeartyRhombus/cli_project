@@ -1,5 +1,5 @@
 class Director
-    attr_accessor
+    attr_accessor :name
 
     @@all = []
 
