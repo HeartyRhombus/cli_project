@@ -21,10 +21,13 @@ class CLI
 
             case input
                 when "titles"
+                    # binding.pry
                     titles
                     prompt
 
-                    # input2 = gets.strip.downcase
+                    input2 = gets.strip.to_i
+
+                    film_info(input2)
 
                 #     case input2
                 #         when input2 > 0 && input2 <= Film.all.length
@@ -57,9 +60,13 @@ class CLI
     end
 
     def film_info(input2)
-        input2.to_i
         if input2 > 0 && input2 < Film.all.length
-            self.find_by_title(input2)
+            film_list = Film.all.sort_by {|film| film.title}
+            film = film_list[input2-1]
+            puts "Title: #{film.title}"
+            puts "Director: #{film.director}"
+            puts "Release Date: #{film.release_date}"
+            puts "Description: #{film.description}"
         end
 
     end
