@@ -1,5 +1,5 @@
 require 'pry'
-require 'HTTParty'
+require 'httparty'
 require 'json'
 
 require_relative '../lib/api'
