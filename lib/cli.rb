@@ -64,7 +64,7 @@ class CLI
         film = film_list[(input.to_i)-1]
         puts ""
         puts Rainbow("Title:").indigo.underline + " #{film.title}"
-        puts "Director: #{film.director}"
+        puts Rainbow("Director:").indigo.underline + " #{film.director}"
         puts "Release Date: #{film.release_date}"
         puts "Description: #{film.description}"
     end
