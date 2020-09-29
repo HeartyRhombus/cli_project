@@ -35,7 +35,9 @@ class CLI
 
             elsif input == "exit"
                 puts ""
+                puts "----------------------------------"
                 puts "Thank you for using the Ghibli Movie Library!"
+                puts "----------------------------------"
                 puts ""
             else
                 puts ""
