@@ -63,7 +63,7 @@ class CLI
         film_list = Film.all.sort_by {|film| film.title}
         film = film_list[(input.to_i)-1]
         puts ""
-        puts "Title: #{film.title}"
+        puts Rainbow("Title:").indigo.underline + " #{film.title}"
         puts "Director: #{film.director}"
         puts "Release Date: #{film.release_date}"
         puts "Description: #{film.description}"
