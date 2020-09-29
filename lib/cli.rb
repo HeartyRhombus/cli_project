@@ -29,13 +29,7 @@ class CLI
                     puts ""
 
             elsif input.to_i > 0 && input.to_i <= Film.all.length
-                film_list = Film.all.sort_by {|film| film.title}
-                film = film_list[(input.to_i)-1]
-                puts ""
-                puts "Title: #{film.title}"
-                puts "Director: #{film.director}"
-                puts "Release Date: #{film.release_date}"
-                puts "Description: #{film.description}"
+                film_info(input)
                 prompt
 
             elsif input == "exit"
@@ -64,16 +58,14 @@ class CLI
         end
     end
 
-    # def film_info(input2)
-    #     if input2 > 0 && input2 < Film.all.length
-    #         film_list = Film.all.sort_by {|film| film.title}
-    #         film = film_list[input2-1]
-    #         puts "Title: #{film.title}"
-    #         puts "Director: #{film.director}"
-    #         puts "Release Date: #{film.release_date}"
-    #         puts "Description: #{film.description}"
-    #     end
-
-    # end
+    def film_info(input)
+        film_list = Film.all.sort_by {|film| film.title}
+        film = film_list[(input.to_i)-1]
+        puts ""
+        puts "Title: #{film.title}"
+        puts "Director: #{film.director}"
+        puts "Release Date: #{film.release_date}"
+        puts "Description: #{film.description}"
+    end
 
 end
