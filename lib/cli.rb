@@ -21,16 +21,20 @@ class CLI
 
             case input
                 when "films"
+                    puts ""
                     # binding.pry
                     titles
                     puts ""
                     puts "To view more information about a film, enter the number of the film you wish to see,"
                     puts "Or enter 'exit' to exit:"
 
-                    input2 = gets.strip.to_i
-
-                    film_info(input2)
-
+                when input.to_i > 0 && input.to_i < Film.all.length
+                    film_list = Film.all.sort_by {|film| film.title}
+                    film = film_list[input2-1]
+                    puts "Title: #{film.title}"
+                    puts "Director: #{film.director}"
+                    puts "Release Date: #{film.release_date}"
+                    puts "Description: #{film.description}"
                     prompt
 
                 when "exit"
@@ -58,15 +62,15 @@ class CLI
         end
     end
 
-    def film_info(input2)
-        if input2 > 0 && input2 < Film.all.length
-            film_list = Film.all.sort_by {|film| film.title}
-            film = film_list[input2-1]
-            puts "Title: #{film.title}"
-            puts "Director: #{film.director}"
-            puts "Release Date: #{film.release_date}"
-            puts "Description: #{film.description}"
-        end
+    # def film_info(input2)
+    #     if input2 > 0 && input2 < Film.all.length
+    #         film_list = Film.all.sort_by {|film| film.title}
+    #         film = film_list[input2-1]
+    #         puts "Title: #{film.title}"
+    #         puts "Director: #{film.director}"
+    #         puts "Release Date: #{film.release_date}"
+    #         puts "Description: #{film.description}"
+    #     end
 
     end
 
