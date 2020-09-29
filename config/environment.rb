@@ -1,6 +1,7 @@
 require 'pry'
 require 'httparty'
 require 'json'
+require 'rainbow'
 
 require_relative '../lib/api'
 require_relative '../lib/cli'
