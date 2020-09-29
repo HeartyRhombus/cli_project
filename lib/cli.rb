@@ -65,7 +65,7 @@ class CLI
         puts ""
         puts Rainbow("Title:").indigo.underline + " #{film.title}"
         puts Rainbow("Director:").indigo.underline + " #{film.director}"
-        puts "Release Date: #{film.release_date}"
+        puts Rainbow("Release Date:").indigo.underline + " #{film.release_date}"
         puts "Description: #{film.description}"
     end
 
