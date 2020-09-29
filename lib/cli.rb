@@ -47,7 +47,8 @@ class CLI
 
     def prompt
         puts ""
-        puts "To view the film list again, enter 'films',"
+        puts "To view details for another film, please enter the film number you wish to see."
+        puts "To view the film list again, enter 'films'"
         puts "Or enter 'exit' to exit:"
         puts ""
     end
