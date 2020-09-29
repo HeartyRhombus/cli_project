@@ -24,6 +24,7 @@ class CLI
                     # binding.pry
                     titles
                     puts ""
+                    puts "----------------------------------"
                     puts "To view more information about a film, enter the number of the film you wish to see,"
                     puts "Or enter 'exit' to exit:"
                     puts ""
@@ -47,6 +48,7 @@ class CLI
 
     def prompt
         puts ""
+        puts "----------------------------------"
         puts "To view details for another film, please enter the film number you wish to see."
         puts "To view the film list again, enter 'films'"
         puts "Or enter 'exit' to exit:"
