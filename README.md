@@ -18,7 +18,9 @@ The following gems will be required to use this application:
         gem install rainbow
 
 ### How To Run
-To run this application, you will need to download a copy to your local environment.
+To run this application please download a copy at:
+
+        https://github.com/HeartyRhombus/cli_project
 
 Once downloaded to your local environment, open the file and run:
 
