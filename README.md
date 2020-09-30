@@ -9,12 +9,18 @@ The application provides a listing of Studio Ghibli films, and displays addition
 
 ### Prerequisites
 The following gems will be required to use this application:
+
 * HTTParty
-        # gem install httparty
+
+        gem install httparty
+
 * JSON
-        # gem install json
+
+        gem install json
+
 * Rainbow
-        # gem install rainbow
+
+        gem install rainbow
 
 ## License
 
