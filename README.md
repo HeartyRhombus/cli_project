@@ -21,6 +21,9 @@ The following gems will be required to use this application:
 
         gem install rainbow
 
+## Author(s)
+* Kayla Budzeak - @HeartyRhombus
+
 ## Acknowledgments
 This application is built using the Studio Ghibli API
 
