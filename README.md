@@ -17,6 +17,17 @@ The following gems will be required to use this application:
 
         gem install rainbow
 
+### How To Run
+To run this application, you will need to download a copy to your local environment.
+
+Once downloaded to your local environment, open the file and run:
+
+        ruby bin/ghibli_library
+
+From here you should see instructions noting to type 'films'
+
+After entering films, a listing of Studio Ghibli films should appear. Now you may select a film for which you wish to see futher details for.
+
 ## Author(s)
 * Kayla Budzeak - @HeartyRhombus
 
