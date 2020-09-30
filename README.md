@@ -25,3 +25,7 @@ The following gems will be required to use this application:
 ## License
 
 ## Acknowledgments
+
+This application is built using the Studio Ghibli API
+
+        https://ghibliapi.herokuapp.com/#
