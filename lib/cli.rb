@@ -15,11 +15,41 @@ class CLI
         puts "To view a listing of Ghibli movies please enter 'films'."
         puts ""
 
+        until_loop(input)
+
+    end
+
+    def prompt
+        puts ""
+        puts "----------------------------------"
+        puts "To view details for another film, please enter the film number you wish to see."
+        puts "To view the film list again, enter 'films'"
+        puts "Or enter 'exit' to exit:"
+        puts ""
+    end
+
+    def titles
+        Film.sorted.each.with_index(1) do |film, index|
+            puts "#{index}. #{film.title}"
+        end
+    end
+
+    def film_info(input)
+        film_list =Film.sorted
+        film = film_list[(input.to_i)-1]
+        puts ""
+        puts Rainbow("Title:").indigo.underline + " #{film.title}"
+        puts Rainbow("Director:").indigo.underline + " #{film.director}"
+        puts Rainbow("Release Date:").indigo.underline + " #{film.release_date}"
+        puts Rainbow("Description:").indigo.underline + " #{film.description}"
+    end
+
+    def until_loop(input)
         until input == "exit"
 
-            input = gets.strip.downcase
+            input = gets.strip.downcase 
 
-            if input == "films"
+             if input == "films"
                     puts ""
                     # binding.pry
                     titles
@@ -45,32 +75,6 @@ class CLI
                 puts ""
             end
         end
-
-    end
-
-    def prompt
-        puts ""
-        puts "----------------------------------"
-        puts "To view details for another film, please enter the film number you wish to see."
-        puts "To view the film list again, enter 'films'"
-        puts "Or enter 'exit' to exit:"
-        puts ""
-    end
-
-    def titles
-        Film.all.sort_by {|film| film.title}.each.with_index(1) do |film, index|
-            puts "#{index}. #{film.title}"
-        end
-    end
-
-    def film_info(input)
-        film_list = Film.all.sort_by {|film| film.title}
-        film = film_list[(input.to_i)-1]
-        puts ""
-        puts Rainbow("Title:").indigo.underline + " #{film.title}"
-        puts Rainbow("Director:").indigo.underline + " #{film.director}"
-        puts Rainbow("Release Date:").indigo.underline + " #{film.release_date}"
-        puts Rainbow("Description:").indigo.underline + " #{film.description}"
     end
 
 end

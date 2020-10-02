@@ -16,4 +16,8 @@ class Film
         @@all
     end
 
+    def self.sorted
+        self.all.sort_by {|film| film.title}
+    end
+
 end
